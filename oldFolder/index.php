@@ -15,6 +15,7 @@ if($_POST){
         $errore = "E' richiesta un messaggio";
       }
       
+      
 
 
 if($_POST["email"]&& filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)===false){
