@@ -2,11 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Minimalistic and elegant portfolio in black and white">
     <title>Portfolio | Emilio Verri</title>
     <link rel="shortcut icon" href=".\image\favicon.ico" type="image/x-icon">
+    <!-- Splash screen con immagine pulsante -->
+<div id="splash-screen" style="position: fixed; inset: 0; background-color: #111; display: flex; align-items: center; justify-content: center; z-index: 99999;">
+  <img src=".\image\OnloadCAT.png" alt="Intro" title="Intro" id="pulse-img" style="width: 150px; height: auto; animation: pulseAnim 1s infinite;">
+</div>
+
+<style>
+  @keyframes pulseAnim {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .fade-blur {
+    animation: fadeOutBlur 1s forwards;
+  }
+
+  @keyframes fadeOutBlur {
+    0% {
+      opacity: 1;
+      filter: blur(0px);
+    }
+    100% {
+      opacity: 0;
+      filter: blur(10px);
+    }
+  }
+</style>
+
+<script>
+  window.addEventListener('load', function () {
+    const splash = document.getElementById('splash-screen');
+    const img = document.getElementById('pulse-img');
+
+    // Dopo 1.5 secondi inizia l'effetto sfuma + blur
+    setTimeout(() => {
+      img.classList.add('fade-blur');
+    }, 1500);
+
+    // Dopo 2.5 secondi rimuove lo splash screen
+    setTimeout(() => {
+      splash.style.display = 'none';
+      document.body.style.overflow = 'auto'; // sblocca scroll
+    }, 2500);
+  });
+
+  // Blocca scroll finché dura splash screen
+  document.body.style.overflow = 'hidden';
+</script>
+
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.3/dist/css/uikit.min.css">
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.3/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.3/dist/js/uikit-icons.min.js"></script>
@@ -1108,6 +1158,55 @@
 
         window.addEventListener('scroll', handleScrollAnimation);
     </script>
+
+
+
+
+<!-- Freccia "torna su" -->
+<style>
+  #backToTop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: #007bff;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s;
+    z-index: 10000;
+  }
+  #backToTop.show {
+    opacity: 1;
+    visibility: visible;
+  }
+</style>
+
+<div id="backToTop" title="Torna su">&#8679;</div>
+
+<script>
+  const backToTop = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {  // dopo 200px di scroll mostra la freccia
+      backToTop.classList.add('show');
+    } else {
+      backToTop.classList.remove('show');
+    }
+  });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
 </body>
 
 </html>
