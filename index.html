@@ -77,7 +77,7 @@
             }
         }
 
-       /* PC Falling Animation */
+
        .falling-pc {
     width: 160px;
     height: 100px;
@@ -108,18 +108,17 @@
 
 
 
-/* Keyframes per far scendere il PC */
+
 @keyframes dropPc {
     0% {
-        top: -150px; /* inizio fuori schermo sopra */
+        top: -150px; 
     }
     100% {
-        top: 100px; /* più in basso di prima, regola questo valore */
+        top: 100px; 
     }
 }
 
 
-        /* Bouncing Balls */
         .bouncing-balls {
             position: absolute;
             top: 0;
@@ -138,7 +137,7 @@
             border-radius: 50%;
         }
 
-        /* Menu Icon */
+
         .menu-icon {
             position: absolute;
             top: 20px;
@@ -262,14 +261,13 @@
 
         .hero button {
             pointer-events: auto;
-            /* Assicurati che il bottone accetti clic */
+        
             z-index: 10;
-            /* Assicurati che il bottone sia sopra altri elementi */
+           
         }
 
         .bouncing-balls {
             pointer-events: none;
-            /* Rendi questo elemento trasparente ai clic */
         }
 
         .logo-container {
@@ -280,12 +278,12 @@
         }
 
         .logo {
-    width: 50px; /* Imposta la larghezza */
-    height: 50px; /* Imposta l'altezza */
-    border-radius: 50%; /* Rende il logo arrotondato */
-    object-fit: cover; /* Assicura che l'immagine si adatti all'interno del cerchio */
-    border: 2px solid #000000; /* Aggiunge un bordo nero attorno al logo */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra per un effetto estetico */
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 2px solid #000000; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
     </style>
@@ -301,14 +299,14 @@
 
 
 
-        <!-- Menu Icon -->
+   
         <div class="menu-icon" id="menuIcon">☰</div>
 
         <div class="logo-container">
             <a href=".\"><img src=".\image\cat-icon.png" alt="Logo" class="logo"></a>
         </div>
 
-        <!-- Sliding Menu -->
+   
         <div class="menu" id="menu">
             <ul>
                 <li><a href="#projects">Projects</a></li>
@@ -336,7 +334,7 @@
     </div>
 
     <script>
-        // Menu Toggle Logic
+        
         const menuIcon = document.getElementById('menuIcon');
         const menu = document.getElementById('menu');
 
@@ -345,7 +343,7 @@
         });
     </script>
 
-<!-- Projects Section -->
+
 <section class="projects scroll-animate" id="projects">
   <h2>My Projects</h2>
 
@@ -355,7 +353,7 @@
 
     <div class="project-scroll-container" style="display: flex; overflow-x: auto; scroll-behavior: smooth; gap: 1rem; padding: 1rem 2rem;">
       
-      <!-- Project Card -->
+     
       <a href=".\progetti\snapsclean.php" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
         <img src="./image/SnapsClean.png" alt="snapsclean" title="snapsclean" style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
         <p>SnapsClean</p>
@@ -395,7 +393,7 @@
   </div>
 </section>
 
-<!-- Script per frecce e scroll -->
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector('.project-scroll-container');
@@ -410,7 +408,7 @@
       container.scrollBy({ left: 300, behavior: 'smooth' });
     });
 
-    // Drag scroll (desktop)
+
     let isDown = false;
     let startX;
     let scrollLeftStart;
@@ -440,7 +438,7 @@
       container.scrollLeft = scrollLeftStart - walk;
     });
 
-    // Touch scroll (mobile)
+
     container.addEventListener('touchstart', (e) => {
       startX = e.touches[0].pageX;
       scrollLeftStart = container.scrollLeft;
@@ -749,7 +747,7 @@
       }
     }
 
-    /* Scrollbar styling for better UX */
+   
     section.timeline-fullscreen::-webkit-scrollbar {
       width: 8px;
     }
@@ -761,7 +759,7 @@
       background: #00aaffaa;
     }
 
-    /* Responsive */
+  
     @media (max-width: 600px) {
       section.timeline-fullscreen {
         height: auto;
@@ -774,7 +772,7 @@
       ul.timeline li {
         margin: 30px 0;
         padding-left: 0;
-        transform: none !important; /* disabilita animazione su mobile */
+        transform: none !important; 
         opacity: 1 !important;
       }
       ul.timeline li::before {
@@ -1020,7 +1018,7 @@
     <footer class="uk-section uk-section-small uk-text-center" style="background-color: #000000; color: #ffffff;">
   <div class="uk-container">
     <div class="uk-grid-small uk-flex-center uk-child-width-auto" uk-grid>
-      <!-- Social Icons -->
+     
       <div>
         <a href="https://www.linkedin.com/in/emilio-verri-911027212/" target="_blank" uk-icon="linkedin" style="color: #ffffff;"></a>
       </div>
@@ -1041,7 +1039,7 @@
 
 
     <script>
-        // Bouncing Balls Logic
+      
         const ballCount = 10;
         const balls = [];
         const container = document.getElementById('bouncingBalls');
@@ -1067,7 +1065,7 @@
                 ball.x += ball.dx;
                 ball.y += ball.dy;
 
-                // Check for collisions with walls
+                
                 if (ball.x <= 0 || ball.x >= containerRect.width - 20) {
                     ball.dx *= -1;
                 }
@@ -1075,7 +1073,7 @@
                     ball.dy *= -1;
                 }
 
-                // Update ball position
+               
                 ball.element.style.left = `${ball.x}px`;
                 ball.element.style.top = `${ball.y}px`;
             });
@@ -1085,7 +1083,7 @@
 
         animateBalls();
 
-        // Scroll Animation
+       
         const scrollElements = document.querySelectorAll('.scroll-animate');
 
         const elementInView = (el, offset = 100) => {
