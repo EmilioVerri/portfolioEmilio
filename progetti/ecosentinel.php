@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio | Emilio Verri</title>
   <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
+
+  <!-- FontAwesome per icona GitHub -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     * {
       box-sizing: border-box;
@@ -82,6 +86,30 @@
       line-height: 1.6;
     }
 
+    /* Stile icona GitHub */
+    .github-icon-wrapper {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .github-icon-wrapper a {
+      display: inline-block;
+      background-color: #fff;
+      border-radius: 50%;
+      padding: 15px;
+      color: #111;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .github-icon-wrapper a:hover {
+      transform: scale(1.1);
+    }
+
+    .github-icon-wrapper i {
+      font-size: 32px;
+    }
+
     @media (max-width: 500px) {
       h1 {
         font-size: 2rem;
@@ -108,12 +136,22 @@
   </div>
 
   <div class="container">
-    <h1>SnapsClean</h1>
-    <img src="../image/SnapsClean.png" alt="Immagine Progetto" title="Immagine Progetto" class="project-image" />
-<p class="description">
-  SnapsClean è un progetto ancora in fase di sviluppo. La repository GitHub è attualmente privata e verrà resa pubblica solo al completamento definitivo del progetto.<br><br>
-  Si tratta di un'iniziativa ecosostenibile che permette agli utenti di scattare foto alla spazzatura che raccolgono, accumulando punti che vengono inseriti in una classifica mensile. I partecipanti con i punteggi più alti possono vincere premi, incentivando così la cura dell’ambiente attraverso un approccio ludico e partecipativo.
+    <h1>EcoSentinel</h1>
+    <img src="../image/EcoSentinel.png" alt="Immagine Progetto" title="Immagine Progetto" class="project-image" />
+<p class="description" style="margin-top: 40px; color: #ccc;">
+  <strong>Eco Sentinel</strong> è un progetto ecosostenibile sviluppato come tesi di laurea, basato su un sistema CNN progettato per rilevare la presenza di fumi nell’ambiente.<br><br>
+  Il progetto è sviluppato in Python e utilizza framework e librerie come Flask per il web, OpenCV e NumPy per l’elaborazione delle immagini, mentre l’addestramento delle reti neurali è stato effettuato con Roboflow e Google Colab.<br><br>
+  Non è ancora preciso al 100%, ma rappresenta una solida base su cui lavorare. Sotto è disponibile il collegamento alla repository GitHub, da cui è possibile scaricare il progetto, modificarlo e programmarlo secondo le proprie esigenze.
 </p>
+
+
+
+    <!-- Icona GitHub centrata con sfondo bianco -->
+    <div class="github-icon-wrapper">
+      <a href="https://github.com/EmilioVerri/EcoSentinel.git" target="_blank" title="Vai alla repository GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
 
   </div>
 </body>

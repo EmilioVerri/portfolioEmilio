@@ -68,7 +68,7 @@
     <h1>Oops! Qualcosa è andato storto</h1>
     <p>Si è verificato un errore durante la richiesta.<br>
     Torna alla home o riprova più tardi.</p>
-    <img src="https://i.imgur.com/O0DCcQy.png" alt="Errore generico" />
+    <img src="https://i.imgur.com/O0DCcQy.png" alt="Errore generico" title="Errore generico" />
     <br />
     <a href="/portfolioEmilio/index.php" class="button">Torna alla Home</a>
   </div>

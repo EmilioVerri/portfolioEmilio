@@ -112,7 +112,7 @@ if($errore!=""){
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="http://emilioverri.altervista.org/">
-                                <img src="assets/images/try.png"  alt="Logo">
+                                <img src="assets/images/try.png"  alt="Logo" title="Logo">
                             </a> <!-- Logo -->
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>

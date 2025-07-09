@@ -345,7 +345,7 @@
 
 
 <section class="projects scroll-animate" id="projects">
-  <h2>My Projects</h2>
+  <h2>I Miei Progetti</h2>
 
   <div class="project-carousel-wrapper" style="position: relative;">
     <button id="scrollLeft" style="position: absolute; top: 40%; left: 0; z-index: 1; border: none; background: none; font-size: 2rem; color: #007bff; cursor: pointer;">&#10094;</button>
@@ -359,14 +359,14 @@
         <p>SnapsClean</p>
       </a>
 
-      <a href="project2.html" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
-        <img src="https://via.placeholder.com/300x200" alt="Project 2 Image" style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
-        <p>Project 2</p>
+      <a href=".\progetti\ecosentinel.php" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
+        <img src="./image/EcoSentinel.png" alt="EcoSentinel" title="EcoSentinel" style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
+        <p>EcoSentinel</p>
       </a>
 
-      <a href="project3.html" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
-        <img src="https://via.placeholder.com/300x200" alt="Project 3 Image" style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
-        <p>Project 3</p>
+      <a href=".\progetti\smkrealestate.php" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
+        <img src="./image/smkRealEstate.png" alt="SmkRealEstate Valtellina" title="SmkRealEstate Valtellina" style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
+        <p>SmkRealEstate Valtellina</p>
       </a>
 
       <a href="project4.html" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
@@ -931,7 +931,7 @@
   
 
 
-<!----
+
 <section class="contact-form" id="contact" style="background:#000; padding:80px 10vw; color:#007bff; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
   <h2 style="text-align:center; font-size:2.8rem; margin-bottom:40px; letter-spacing:1px; color:#007bff;">Contattami</h2>
   <form id="contactForm" class="form-container" action="contatti.php" method="POST" style="max-width:700px; margin:0 auto; background:#111; padding:40px; border-radius:20px; color:#007bff; box-shadow:0 0 25px rgba(0,123,255,0.3); animation:fadeIn 1s ease-in-out;">
@@ -1011,7 +1011,7 @@
   <blockquote style="font-size: 1.5rem; font-style: italic; color: #333;">
      "La vita è tutta ‘na commedia: io faccio ridere pure quando piango… e piango pure quando rido!"  Totò
   </blockquote>
-</section>-->
+</section>
 
 
 

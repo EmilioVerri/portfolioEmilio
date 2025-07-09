@@ -67,7 +67,7 @@
   <div class="container">
     <h1>404</h1>
     <p>Oops! Pagina non trovata</p>
-    <img src="https://i.imgur.com/qIufhof.png" alt="Errore 404" />
+    <img src="https://i.imgur.com/qIufhof.png" alt="Errore 404" title="Errore 404" />
     <br />
     <a href="/portfolioEmilio/index.php" class="button">Torna alla Home</a>
   </div>

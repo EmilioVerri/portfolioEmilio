@@ -108,12 +108,45 @@
   </div>
 
   <div class="container">
-    <h1>SnapsClean</h1>
-    <img src="../image/SnapsClean.png" alt="Immagine Progetto" title="Immagine Progetto" class="project-image" />
-<p class="description">
-  SnapsClean è un progetto ancora in fase di sviluppo. La repository GitHub è attualmente privata e verrà resa pubblica solo al completamento definitivo del progetto.<br><br>
-  Si tratta di un'iniziativa ecosostenibile che permette agli utenti di scattare foto alla spazzatura che raccolgono, accumulando punti che vengono inseriti in una classifica mensile. I partecipanti con i punteggi più alti possono vincere premi, incentivando così la cura dell’ambiente attraverso un approccio ludico e partecipativo.
+    <h1>SmkRealEstate Valtellina</h1>
+    <img src="../image/smkRealEstate.png" alt="Immagine Progetto" title="Immagine Progetto" class="project-image" />
+<p class="description" style="margin-top: 40px; color: #ccc;">
+  Ho collaborato con <strong>ZServizi</strong> per la realizzazione del sito <strong>SMK Real Estate</strong>, un servizio dedicato alla sublocazione di immobili. In particolare, ho fornito supporto nella parte logica del progetto, contribuendo allo sviluppo delle funzionalità e al flusso operativo della piattaforma.
 </p>
+
+<style>
+.github-icon-wrapper {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.visit-button {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 12px 20px;
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.visit-button i {
+  margin-right: 8px;
+}
+
+.visit-button:hover {
+  transform: scale(1.05);
+  background-color: #f0f0f0;
+}
+</style>
+
+<div class="github-icon-wrapper">
+  <a href="https://www.smkrealestate.it/" target="_blank" title="Visita il sito" class="visit-button">
+    <i class="fas fa-globe"></i> Visita il sito
+  </a>
+</div>
+
 
   </div>
 </body>
