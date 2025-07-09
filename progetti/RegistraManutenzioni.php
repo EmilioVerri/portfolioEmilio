@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio | Emilio Verri</title>
   <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
+
+  <!-- FontAwesome per icona GitHub -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     * {
       box-sizing: border-box;
@@ -82,6 +86,30 @@
       line-height: 1.6;
     }
 
+    /* Stile icona GitHub */
+    .github-icon-wrapper {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .github-icon-wrapper a {
+      display: inline-block;
+      background-color: #fff;
+      border-radius: 50%;
+      padding: 15px;
+      color: #111;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .github-icon-wrapper a:hover {
+      transform: scale(1.1);
+    }
+
+    .github-icon-wrapper i {
+      font-size: 32px;
+    }
+
     @media (max-width: 500px) {
       h1 {
         font-size: 2rem;
@@ -108,45 +136,25 @@
   </div>
 
   <div class="container">
-    <h1>SmkRealEstate Valtellina</h1>
-    <img src="../image/smkRealEstate.png" alt="Immagine Progetto" title="Immagine Progetto" class="project-image" />
+    <h1>Registra Manutenzioni</h1>
+    <img src="../image/RegistraManutenzioni.png" alt="Immagine Progetto" title="Immagine Progetto" class="project-image" />
 <p class="description" style="margin-top: 40px; color: #ccc;">
-  Ho collaborato (senza scopo di lucro)con <strong>ZServizi</strong> per la realizzazione del sito <strong>SMK Real Estate</strong>, un servizio dedicato alla sublocazione di immobili. In particolare, ho fornito supporto nella parte logica del progetto, contribuendo allo sviluppo delle funzionalità e al flusso operativo della piattaforma.
+  Questo software è stato sviluppato per semplificare la gestione delle manutenzioni periodiche. È possibile scaricarlo e utilizzarlo gratuitamente.<br><br>
+  Una volta effettuato il download, basta avviare il file <code>www\manutenzione.exe</code> per iniziare ad aggiungere interventi di manutenzione e consultare lo storico delle operazioni effettuate.<br><br>
+  Il programma include anche un sistema di notifica automatica che ti avverte quando una manutenzione è scaduta, aiutandoti a tenere tutto sotto controllo in modo semplice ed efficiente.<br><br>
+  Attualmente l’interfaccia grafica è piuttosto essenziale e funzionale, ma sono previsti miglioramenti per renderla più moderna e intuitiva.
 </p>
 
-<style>
-.github-icon-wrapper {
-  margin-top: 30px;
-  text-align: center;
-}
 
-.visit-button {
-  display: inline-block;
-  background-color: #fff;
-  border-radius: 30px;
-  padding: 12px 20px;
-  color: #111;
-  text-decoration: none;
-  font-weight: bold;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
 
-.visit-button i {
-  margin-right: 8px;
-}
 
-.visit-button:hover {
-  transform: scale(1.05);
-  background-color: #f0f0f0;
-}
-</style>
 
-<div class="github-icon-wrapper">
-  <a href="https://www.smkrealestate.it/" target="_blank" title="Visita il sito" class="visit-button">
-    <i class="fas fa-globe"></i> Visita il sito
-  </a>
-</div>
-
+    <!-- Icona GitHub centrata con sfondo bianco -->
+    <div class="github-icon-wrapper">
+      <a href="https://github.com/EmilioVerri/Software-Manutenzione.git" target="_blank" title="Vai alla repository GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
 
   </div>
 </body>

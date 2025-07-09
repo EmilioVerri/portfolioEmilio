@@ -345,7 +345,7 @@
 
 
 <section class="projects scroll-animate" id="projects">
-  <h2>I Miei Progetti</h2>
+  <h2>Esplora i miei Progetti</h2>
 
   <div class="project-carousel-wrapper" style="position: relative;">
     <button id="scrollLeft" style="position: absolute; top: 40%; left: 0; z-index: 1; border: none; background: none; font-size: 2rem; color: #007bff; cursor: pointer;">&#10094;</button>
@@ -369,25 +369,26 @@
         <p>SmkRealEstate Valtellina</p>
       </a>
 
-      <a href="project4.html" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
-        <img src="https://via.placeholder.com/300x200" alt="Project 4 Image" style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
-        <p>Project 4</p>
+      <a href=".\progetti\RegistraManutenzioni.php" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
+        <img src="./image/RegistraManutenzioni.png" alt="RegistraManutenzioni" title="RegistraManutenzioni"style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
+        <p>Registra Manutenzioni</p>
       </a>
 
-      <a href="project5.html" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
-        <img src="https://via.placeholder.com/300x200" alt="Project 5 Image" style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
-        <p>Project 5</p>
+
+      <a href=".\progetti\riadSidiOmar.php" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
+        <img src="./image/riadSidiOmar.png" alt="riadSidiOmar" title="riadSidiOmar" style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
+        <p>Riad Sidi Omar</p>
       </a>
 
-      <a href="project6.html" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
-        <img src="https://via.placeholder.com/300x200" alt="Project 6 Image" style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
-        <p>Project 6</p>
+            <a href=".\progetti\GestioneDipendenti.php" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
+        <img src="./image/GestioneDipendenti.png" alt="GestioneDipendenti" title="GestioneDipendenti" style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
+        <p>Gestione Dipendenti</p>
       </a>
 
-      <a href="project7.html" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
+      <!--<a href="QR Code Manager" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
         <img src="https://via.placeholder.com/300x200" alt="Project 7 Image" style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
         <p>Project 7</p>
-      </a>
+      </a>-->
 
     </div>
   </div>
@@ -518,7 +519,7 @@
       <h2>About Me</h2>
       <p>Mi chiamo <strong>Emilio Verri</strong>, sono un giovane ragazzo valtellinese appassionato di informatica. Il mio percorso di studi è iniziato alla Job’s Academy, dove ho imparato le basi dello sviluppo software con un approccio concreto e orientato al mondo del lavoro. Dopo questa esperienza formativa, ho deciso di proseguire con un percorso universitario per approfondire ulteriormente le mie competenze. Col tempo, mi sono avvicinato al mondo dell’infrastruttura e dell’amministrazione dei sistemi, intraprendendo il percorso da sistemista. Nonostante ciò, conservo una forte passione per lo sviluppo e continuo a coltivarla nel tempo libero, cercando sempre nuove sfide e progetti in cui mettermi alla prova.</p>
       <ul>
-        <li><strong>Skills:</strong> JavaScript, PHP, Scripting Powershell</li>
+        <li><strong>Skills:</strong> JavaScript, PHP, Scripting Powershell e Python</li>
         <li><strong>Esperienza:</strong> 1 anno dedicato allo sviluppo web e 1 anno allo sviluppo di applicativi interni aziendali</li>
         <li><strong>Curiosità:</strong>Mi piace lanciarmi in piccoli progetti personali dedicati allo sviluppo</li>
       </ul>

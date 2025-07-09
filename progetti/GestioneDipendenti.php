@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio | Emilio Verri</title>
   <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
+
+  <!-- FontAwesome per icone -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     * {
       box-sizing: border-box;
@@ -82,6 +86,41 @@
       line-height: 1.6;
     }
 
+    .visit-icon-wrapper {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .visit-icon-wrapper a {
+      display: inline-block;
+      background-color: #fff;
+      border-radius: 50%;
+      padding: 15px;
+      color: #111;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+      font-weight: bold;
+    }
+
+    .visit-icon-wrapper a:hover {
+      transform: scale(1.1);
+    }
+
+    .visit-icon-wrapper i {
+      font-size: 24px;
+      margin-right: 8px;
+    }
+
+    .error-image {
+      margin-top: 60px;
+      max-width: 100%;
+      width: 300px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0.7;
+    }
+
     @media (max-width: 500px) {
       h1 {
         font-size: 2rem;
@@ -108,45 +147,15 @@
   </div>
 
   <div class="container">
-    <h1>SmkRealEstate Valtellina</h1>
-    <img src="../image/smkRealEstate.png" alt="Immagine Progetto" title="Immagine Progetto" class="project-image" />
-<p class="description" style="margin-top: 40px; color: #ccc;">
-  Ho collaborato (senza scopo di lucro)con <strong>ZServizi</strong> per la realizzazione del sito <strong>SMK Real Estate</strong>, un servizio dedicato alla sublocazione di immobili. In particolare, ho fornito supporto nella parte logica del progetto, contribuendo allo sviluppo delle funzionalità e al flusso operativo della piattaforma.
-</p>
+    <h1>Gestione Dipendenti</h1>
+    <img src="../image/GestioneDipendenti.png" alt="Immagine Progetto" title="Immagine Progetto" class="project-image" />
+    
+    <p class="description">
+      Il progetto <strong>Gestione Dipendenti</strong> è attualmente in fase di sviluppo.<br><br>
+    </p>
 
-<style>
-.github-icon-wrapper {
-  margin-top: 30px;
-  text-align: center;
-}
 
-.visit-button {
-  display: inline-block;
-  background-color: #fff;
-  border-radius: 30px;
-  padding: 12px 20px;
-  color: #111;
-  text-decoration: none;
-  font-weight: bold;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.visit-button i {
-  margin-right: 8px;
-}
-
-.visit-button:hover {
-  transform: scale(1.05);
-  background-color: #f0f0f0;
-}
-</style>
-
-<div class="github-icon-wrapper">
-  <a href="https://www.smkrealestate.it/" target="_blank" title="Visita il sito" class="visit-button">
-    <i class="fas fa-globe"></i> Visita il sito
-  </a>
-</div>
-
+    <img src="https://i.imgur.com/qIufhof.png" alt="Gestione Dipendenti" title="Gestione Dipendenti" class="error-image" />
 
   </div>
 </body>
