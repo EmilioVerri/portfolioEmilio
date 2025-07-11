@@ -1,11 +1,11 @@
 Options -Indexes
 # Abilita la riscrittura URL se necessaria
 RewriteEngine On
-ErrorDocument 404 /portfolioEmilio/error/404.php
-ErrorDocument 400 /portfolioEmilio/error/error.php
-ErrorDocument 402 /portfolioEmilio/error/error.php
-ErrorDocument 403 /portfolioEmilio/error/error.php
-ErrorDocument 408 /portfolioEmilio/error/error.php
-ErrorDocument 500 /portfolioEmilio/error/error.php
-ErrorDocument 502 /portfolioEmilio/error/error.php
-ErrorDocument 503 /portfolioEmilio/error/error.php
+ErrorDocument 404 https://emilioverri.altervista.org/error/404.php
+ErrorDocument 400 https://emilioverri.altervista.org/error/error.php
+ErrorDocument 402 https://emilioverri.altervista.org/error/error.php
+ErrorDocument 403 https://emilioverri.altervista.org/error/error.php
+ErrorDocument 408 https://emilioverri.altervista.org/error/error.php
+ErrorDocument 500 https://emilioverri.altervista.org/error/error.php
+ErrorDocument 502 https://emilioverri.altervista.org/error/error.php
+ErrorDocument 503 https://emilioverri.altervista.org/error/error.php

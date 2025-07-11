@@ -118,7 +118,7 @@
     Torna alla home o riprova più tardi.</p>
     <img src="https://i.imgur.com/O0DCcQy.png" alt="Errore generico" title="Errore generico" />
     <br />
-    <a href="/portfolioEmilio/index.php" class="button">Torna alla Home</a>
+    <a href="..\index.php" class="button">Torna alla Home</a>
   </div>
 </body>
 </html>
