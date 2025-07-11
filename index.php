@@ -23,12 +23,11 @@ _iub.csConfiguration = {"siteId":4151296,"cookiePolicyId":59616074,"lang":"it","
     <meta name="description" content="Minimalistic and elegant portfolio in black and white">
     <title>Portfolio | Emilio Verri</title>
     <link rel="shortcut icon" href=".\image\favicon.ico" type="image/x-icon">
- <!-- Splash screen con immagine pulsante + PC che cade -->
+
 <div id="splash-screen" style="position: fixed; inset: 0; background-color: #111; display: flex; align-items: center; justify-content: center; z-index: 99999;">
   <img src="./image/OnloadCAT.png" alt="Intro" title="Intro" id="pulse-img" style="width: 150px; height: auto; animation: pulseAnim 1s infinite;">
 </div>
 
-<!-- PC che cade (inizialmente nascosto) -->
 <div id="pc-container" style="display: none; z-index: 9999; position: relative;">
   <div class="falling-pc">
     <div class="screen"></div>
@@ -91,12 +90,12 @@ _iub.csConfiguration = {"siteId":4151296,"cookiePolicyId":59616074,"lang":"it","
     const img = document.getElementById('pulse-img');
     const pcContainer = document.getElementById('pc-container');
 
-    // Effetto blur sull'immagine dopo 1.5 secondi
+
     setTimeout(() => {
       img.classList.add('fade-blur');
     }, 1500);
 
-    // Rimuove splash e mostra il PC dopo 2.5 secondi
+
     setTimeout(() => {
       splash.style.display = 'none';
       document.body.style.overflow = 'auto';
@@ -104,7 +103,7 @@ _iub.csConfiguration = {"siteId":4151296,"cookiePolicyId":59616074,"lang":"it","
     }, 2500);
   });
 
-  // Blocca scroll iniziale
+
   document.body.style.overflow = 'hidden';
 </script>
 
@@ -478,7 +477,7 @@ _iub.csConfiguration = {"siteId":4151296,"cookiePolicyId":59616074,"lang":"it","
       </a>
 
 
-      <a href=".\progetti\riadSidiOmar.php" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
+      <a href=".\progetti\riadsidiomar.php" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
         <img src="./image/riadSidiOmar.png" alt="riadSidiOmar" title="riadSidiOmar" style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
         <p>Riad Sidi Omar</p>
       </a>
@@ -1049,7 +1048,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $to = "emilioverri83@gmail.com";
         $subject = "Hai ricevuto un messaggio da $nome $cognome";
-        $logoUrl = "https://emilioverri.altervista.org/image/cat-icon.png"; // <-- cambia se serve
+        $logoUrl = "https://emilioverri.altervista.org/image/cat-icon.png"; 
 
         $body = "
         <html>
@@ -1270,12 +1269,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-<!-- Freccia "torna su" -->
+
 <style>
   #backToTop {
     position: fixed;
     bottom: 40px;
-    right: 40px;
+    left: 40px;
     background-color: #007bff;
     color: white;
     width: 45px;
@@ -1303,7 +1302,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   const backToTop = document.getElementById('backToTop');
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {  // dopo 200px di scroll mostra la freccia
+    if (window.scrollY > 200) {  
       backToTop.classList.add('show');
     } else {
       backToTop.classList.remove('show');

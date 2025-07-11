@@ -6,9 +6,8 @@
   <title>Portfolio | Emilio Verri</title>
   <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
 
-  <!-- FontAwesome per icona GitHub -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   <!-- Splash screen con immagine pulsante -->
+
 <div id="splash-screen" style="position: fixed; inset: 0; background-color: #111; display: flex; align-items: center; justify-content: center; z-index: 99999;">
   <img src="..\image\OnloadCAT.png" alt="Intro" title="Intro" id="pulse-img" style="width: 150px; height: auto; animation: pulseAnim 1s infinite;">
 </div>
@@ -41,19 +40,19 @@
     const splash = document.getElementById('splash-screen');
     const img = document.getElementById('pulse-img');
 
-    // Dopo 1.5 secondi inizia l'effetto sfuma + blur
+   
     setTimeout(() => {
       img.classList.add('fade-blur');
     }, 1500);
 
-    // Dopo 2.5 secondi rimuove lo splash screen
+
     setTimeout(() => {
       splash.style.display = 'none';
-      document.body.style.overflow = 'auto'; // sblocca scroll
+      document.body.style.overflow = 'auto'; 
     }, 2500);
   });
 
-  // Blocca scroll finché dura splash screen
+
   document.body.style.overflow = 'hidden';
 </script>
 
@@ -134,7 +133,7 @@
       line-height: 1.6;
     }
 
-    /* Stile icona GitHub */
+ 
     .github-icon-wrapper {
       margin-top: 30px;
       text-align: center;
@@ -197,7 +196,7 @@
 
 
 
-    <!-- Icona GitHub centrata con sfondo bianco -->
+
     <div class="github-icon-wrapper">
       <a href="https://github.com/EmilioVerri/Software-Manutenzione.git" target="_blank" title="Vai alla repository GitHub">
         <i class="fab fa-github"></i>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio | Emilio Verri</title>
   <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
-   <!-- Splash screen con immagine pulsante -->
+
 <div id="splash-screen" style="position: fixed; inset: 0; background-color: #111; display: flex; align-items: center; justify-content: center; z-index: 99999;">
   <img src="..\image\OnloadCAT.png" alt="Intro" title="Intro" id="pulse-img" style="width: 150px; height: auto; animation: pulseAnim 1s infinite;">
 </div>
@@ -38,19 +38,19 @@
     const splash = document.getElementById('splash-screen');
     const img = document.getElementById('pulse-img');
 
-    // Dopo 1.5 secondi inizia l'effetto sfuma + blur
+
     setTimeout(() => {
       img.classList.add('fade-blur');
     }, 1500);
 
-    // Dopo 2.5 secondi rimuove lo splash screen
+    
     setTimeout(() => {
       splash.style.display = 'none';
-      document.body.style.overflow = 'auto'; // sblocca scroll
+      document.body.style.overflow = 'auto'; 
     }, 2500);
   });
 
-  // Blocca scroll finché dura splash screen
+  
   document.body.style.overflow = 'hidden';
 </script>
   <style>
