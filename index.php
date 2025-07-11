@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="text/javascript">
+  var _iub = _iub || [];
+  _iub.csConfiguration = {
+    "siteId": 4151296,
+    "cookiePolicyId": 59616074,
+    "lang": "it"
+  };
+</script>
+<script type="text/javascript" src="https://cs.iubenda.com/autoblocking/4151296.js"></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
+    <script type="text/javascript">
+var _iub = _iub || [];
+_iub.csConfiguration = {"siteId":4151296,"cookiePolicyId":59616074,"lang":"it","storage":{"useSiteId":true}};
+</script>
+<script type="text/javascript" src="https://cs.iubenda.com/autoblocking/4151296.js"></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
         <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Minimalistic and elegant portfolio in black and white">
@@ -1012,7 +1029,6 @@
     }
   </style>
 </section>
-
 <?php
 $response = "";
 $showPopup = false;
@@ -1022,15 +1038,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cognome = htmlspecialchars(strip_tags(trim($_POST["cognome"] ?? '')));
     $email = filter_var(trim($_POST["email"] ?? ''), FILTER_SANITIZE_EMAIL);
     $messaggio = htmlspecialchars(strip_tags(trim($_POST["messaggio"] ?? '')));
+    $privacy = isset($_POST["privacy"]) ? "Accettata" : "Non accettata";
 
     if (empty($nome) || empty($cognome) || empty($email) || empty($messaggio)) {
         $response = "Tutti i campi sono obbligatori.";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $response = "Indirizzo email non valido.";
+    } elseif ($privacy === "Non accettata") {
+        $response = "Devi accettare la privacy policy per inviare il messaggio.";
     } else {
         $to = "emilioverri83@gmail.com";
         $subject = "Hai ricevuto un messaggio da $nome $cognome";
-        $logoUrl = "..\image\cat-icon.png"; // Cambia con URL reale
+        $logoUrl = "https://emilioverri.altervista.org/image/cat-icon.png"; // <-- cambia se serve
 
         $body = "
         <html>
@@ -1053,6 +1072,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <p><strong>Cognome:</strong> $cognome</p>
               <p><strong>Email:</strong> $email</p>
               <p><strong>Messaggio:</strong><br>" . nl2br($messaggio) . "</p>
+              <p><strong>Privacy:</strong> $privacy</p>
               <div class='signature'>
                 <p>– Emilio Verri</p>
               </div>
@@ -1086,7 +1106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       setTimeout(() => {
         const popup = document.getElementById('popupSuccess');
         if (popup) popup.style.display = 'none';
-      }, 3000);
+      }, 5000);
     </script>
   <?php endif; ?>
 
@@ -1107,6 +1127,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <label for="messaggio" style="display:block; margin-bottom:8px; font-weight:600;">Cosa vuoi chiedermi?</label>
       <textarea name="messaggio" id="messaggio" rows="5" required style="width:100%; padding:12px 15px; border:2px solid #007bff; border-radius:8px; font-size:1rem; background:#000; color:#007bff; outline:none;"></textarea>
     </div>
+
+    <div class="form-group" style="margin-bottom:30px;">
+      <label style="display:flex; align-items:center; font-size:0.95rem;">
+        <input type="checkbox" name="privacy" required style="margin-right:10px;"> 
+        Accetto la <a href="https://www.iubenda.com/privacy-policy/59616074" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+      </label>
+    </div>
+
     <button type="submit" style="background:#007bff; color:#fff; padding:15px 40px; border:none; border-radius:50px; font-size:1.2rem; cursor:pointer;">
       Invia Messaggio
     </button>
@@ -1137,11 +1165,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </section>
 
 
-
-
-
-
-
 <section style="background-color: #fff; padding: 40px 20px; text-align: center;">
   <blockquote style="font-size: 1.5rem; font-style: italic; color: #333;">
      "La vita è tutta ‘na commedia: io faccio ridere pure quando piango… e piango pure quando rido!"  Totò
@@ -1168,6 +1191,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="uk-margin-small-top uk-text-small" style="color: #ccc;">
       <p>Email: <a href="mailto:emilioverri83@gmail.com" style="color: #ccc;">emilioverri83@gmail.com</a> | Tel: +39 3933130400</p>
       <p>&copy; 2025 Emilio Verri. Tutti i diritti riservati.</p>
+      <p><a href="https://www.iubenda.com/privacy-policy/59616074" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script> | <a href="https://www.iubenda.com/privacy-policy/59616074/cookie-policy" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe " title="Cookie Policy ">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script></p>
     </div>
   </div>
 </footer>
