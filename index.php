@@ -1030,7 +1030,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $to = "emilioverri83@gmail.com";
         $subject = "Hai ricevuto un messaggio da $nome $cognome";
-        $logoUrl = "https://emilioverri.altervista.org/image/cat-icon.png"; // Cambia con URL reale
+        $logoUrl = "..\image\cat-icon.png"; // Cambia con URL reale
 
         $body = "
         <html>
