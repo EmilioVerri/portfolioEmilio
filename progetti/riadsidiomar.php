@@ -188,10 +188,10 @@
 <body>
 
   <div class="top-bar">
-    <a href="/portfolioEmilio/index.php">
+    <a href="../index.php">
       <img src="../image/cat-icon.png" alt="Logo" title="Logo" />
     </a>
-    <a href="/portfolioEmilio/index.php" class="button">Home</a>
+    <a href="../index.php" class="button">Home</a>
   </div>
 
   <div class="container">

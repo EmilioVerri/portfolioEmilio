@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
         <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Minimalistic and elegant portfolio in black and white">
     <title>Portfolio | Emilio Verri</title>
     <link rel="shortcut icon" href=".\image\favicon.ico" type="image/x-icon">
-    <!-- Splash screen con immagine pulsante -->
+ <!-- Splash screen con immagine pulsante + PC che cade -->
 <div id="splash-screen" style="position: fixed; inset: 0; background-color: #111; display: flex; align-items: center; justify-content: center; z-index: 99999;">
-  <img src=".\image\OnloadCAT.png" alt="Intro" title="Intro" id="pulse-img" style="width: 150px; height: auto; animation: pulseAnim 1s infinite;">
+  <img src="./image/OnloadCAT.png" alt="Intro" title="Intro" id="pulse-img" style="width: 150px; height: auto; animation: pulseAnim 1s infinite;">
+</div>
+
+<!-- PC che cade (inizialmente nascosto) -->
+<div id="pc-container" style="display: none; z-index: 9999; position: relative;">
+  <div class="falling-pc">
+    <div class="screen"></div>
+    <div class="base"></div>
+  </div>
 </div>
 
 <style>
@@ -24,14 +31,40 @@
   }
 
   @keyframes fadeOutBlur {
-    0% {
-      opacity: 1;
-      filter: blur(0px);
-    }
-    100% {
-      opacity: 0;
-      filter: blur(10px);
-    }
+    0% { opacity: 1; filter: blur(0px); }
+    100% { opacity: 0; filter: blur(10px); }
+  }
+
+  .falling-pc {
+    width: 160px;
+    height: 100px;
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: dropPc 2s ease-out forwards;
+  }
+
+  .falling-pc .screen {
+    width: 140px;
+    height: 60px;
+    background-color: #000000;
+    border: 2px solid #ffffff;
+    margin: 0 auto;
+  }
+
+  .falling-pc .base {
+    width: 70px;
+    height: 20px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    margin: 5px auto 0;
+    border-radius: 0 0 6px 6px;
+  }
+
+  @keyframes dropPc {
+    0% { top: -150px; }
+    100% { top: 100px; }
   }
 </style>
 
@@ -39,22 +72,25 @@
   window.addEventListener('load', function () {
     const splash = document.getElementById('splash-screen');
     const img = document.getElementById('pulse-img');
+    const pcContainer = document.getElementById('pc-container');
 
-    // Dopo 1.5 secondi inizia l'effetto sfuma + blur
+    // Effetto blur sull'immagine dopo 1.5 secondi
     setTimeout(() => {
       img.classList.add('fade-blur');
     }, 1500);
 
-    // Dopo 2.5 secondi rimuove lo splash screen
+    // Rimuove splash e mostra il PC dopo 2.5 secondi
     setTimeout(() => {
       splash.style.display = 'none';
-      document.body.style.overflow = 'auto'; // sblocca scroll
+      document.body.style.overflow = 'auto';
+      pcContainer.style.display = 'block';
     }, 2500);
   });
 
-  // Blocca scroll finché dura splash screen
+  // Blocca scroll iniziale
   document.body.style.overflow = 'hidden';
 </script>
+
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.3/dist/css/uikit.min.css">
@@ -127,7 +163,7 @@
             }
         }
 
-
+/*
        .falling-pc {
     width: 160px;
     height: 100px;
@@ -143,12 +179,12 @@
     height: 60px;
     background-color: #000000;
     border: 2px solid #ffffff;
-    /*border-radius: 6px 6px 0 0;*/
+    
     margin: 0 auto;
 }
 
 .falling-pc .base {
-    width: 70px;       /* base più piccola */
+    width: 70px;       
     height: 20px;
     background-color: #ffffff;
     border: 2px solid #000000;
@@ -166,7 +202,7 @@
     100% {
         top: 100px; 
     }
-}
+}*/
 
 
         .bouncing-balls {
@@ -368,10 +404,10 @@
         </div>
 
         <div class="bouncing-balls" id="bouncingBalls"></div>
-        <div class="falling-pc">
+      <!--  <div class="falling-pc">
             <div class="screen"></div>
             <div class="base"></div>
-        </div>
+        </div>-->
         <h1 style="color: #007bff; font-family: 'Courier New', Courier, monospace;text-transform: uppercase;">V3RR1L0G1C</h1>
 
 <p style="color: #007bff;">🤖Codice e Divertimento🤖</p>
@@ -977,40 +1013,114 @@
   </style>
 </section>
 
+<?php
+$response = "";
+$showPopup = false;
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = htmlspecialchars(strip_tags(trim($_POST["nome"] ?? '')));
+    $cognome = htmlspecialchars(strip_tags(trim($_POST["cognome"] ?? '')));
+    $email = filter_var(trim($_POST["email"] ?? ''), FILTER_SANITIZE_EMAIL);
+    $messaggio = htmlspecialchars(strip_tags(trim($_POST["messaggio"] ?? '')));
 
-  
+    if (empty($nome) || empty($cognome) || empty($email) || empty($messaggio)) {
+        $response = "Tutti i campi sono obbligatori.";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $response = "Indirizzo email non valido.";
+    } else {
+        $to = "emilioverri83@gmail.com";
+        $subject = "Hai ricevuto un messaggio da $nome $cognome";
+        $logoUrl = "https://emilioverri.altervista.org/image/cat-icon.png"; // Cambia con URL reale
 
+        $body = "
+        <html>
+        <head>
+          <style>
+            body { font-family: Arial, sans-serif; color: #333; background-color: #f9f9f9; }
+            .container { max-width: 600px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+            .header img { max-width: 150px; display: block; margin: 0 auto 20px; }
+            .content p { font-size: 16px; line-height: 1.5; }
+            .signature { margin-top: 30px; font-style: italic; color: #555; }
+          </style>
+        </head>
+        <body>
+          <div class='container'>
+            <div class='header'>
+              <img src='$logoUrl' alt='Logo sito'>
+            </div>
+            <div class='content'>
+              <p><strong>Nome:</strong> $nome</p>
+              <p><strong>Cognome:</strong> $cognome</p>
+              <p><strong>Email:</strong> $email</p>
+              <p><strong>Messaggio:</strong><br>" . nl2br($messaggio) . "</p>
+              <div class='signature'>
+                <p>– Emilio Verri</p>
+              </div>
+            </div>
+          </div>
+        </body>
+        </html>";
 
+        $headers = "From: \"Emilio Verri\" <emilioverri@portfolio.altervista.org>\r\n";
+        $headers .= "Reply-To: $email\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+        if (mail($to, $subject, $body, $headers)) {
+            $showPopup = true;
+        } else {
+            $response = "Errore durante l'invio del messaggio.";
+        }
+    }
+}
+?>
 
 <section class="contact-form" id="contact" style="background:#000; padding:80px 10vw; color:#007bff; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
   <h2 style="text-align:center; font-size:2.8rem; margin-bottom:40px; letter-spacing:1px; color:#007bff;">Contattami</h2>
-  <form id="contactForm" class="form-container" action="contatti.php" method="POST" style="max-width:700px; margin:0 auto; background:#111; padding:40px; border-radius:20px; color:#007bff; box-shadow:0 0 25px rgba(0,123,255,0.3); animation:fadeIn 1s ease-in-out;">
+
+  <?php if ($showPopup): ?>
+    <div id="popupSuccess" style="position: fixed; top: 30px; left: 50%; transform: translateX(-50%); background-color: #28a745; color: white; padding: 15px 30px; border-radius: 30px; font-weight: bold; z-index: 9999; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+      ✅ Messaggio inviato con successo!
+    </div>
+    <script>
+      setTimeout(() => {
+        const popup = document.getElementById('popupSuccess');
+        if (popup) popup.style.display = 'none';
+      }, 3000);
+    </script>
+  <?php endif; ?>
+
+  <form class="form-container" action="" method="POST" style="max-width:700px; margin:0 auto; background:#111; padding:40px; border-radius:20px; color:#007bff; box-shadow:0 0 25px rgba(0,123,255,0.3); animation:fadeIn 1s ease-in-out;">
     <div class="form-group" style="margin-bottom:25px;">
       <label for="nome" style="display:block; margin-bottom:8px; font-weight:600;">Nome</label>
-      <input type="text" name="nome" id="nome" required style="width:100%; padding:12px 15px; border:2px solid #007bff; border-radius:8px; font-size:1rem; background:#000; color:#007bff; outline:none; transition:border-color 0.3s;">
+      <input type="text" name="nome" id="nome" required style="width:100%; padding:12px 15px; border:2px solid #007bff; border-radius:8px; font-size:1rem; background:#000; color:#007bff; outline:none;">
     </div>
     <div class="form-group" style="margin-bottom:25px;">
       <label for="cognome" style="display:block; margin-bottom:8px; font-weight:600;">Cognome</label>
-      <input type="text" name="cognome" id="cognome" required style="width:100%; padding:12px 15px; border:2px solid #007bff; border-radius:8px; font-size:1rem; background:#000; color:#007bff; outline:none; transition:border-color 0.3s;">
+      <input type="text" name="cognome" id="cognome" required style="width:100%; padding:12px 15px; border:2px solid #007bff; border-radius:8px; font-size:1rem; background:#000; color:#007bff; outline:none;">
     </div>
     <div class="form-group" style="margin-bottom:25px;">
       <label for="email" style="display:block; margin-bottom:8px; font-weight:600;">Email</label>
-      <input type="email" name="email" id="email" required style="width:100%; padding:12px 15px; border:2px solid #007bff; border-radius:8px; font-size:1rem; background:#000; color:#007bff; outline:none; transition:border-color 0.3s;">
+      <input type="email" name="email" id="email" required style="width:100%; padding:12px 15px; border:2px solid #007bff; border-radius:8px; font-size:1rem; background:#000; color:#007bff; outline:none;">
     </div>
     <div class="form-group" style="margin-bottom:30px;">
       <label for="messaggio" style="display:block; margin-bottom:8px; font-weight:600;">Cosa vuoi chiedermi?</label>
-      <textarea name="messaggio" id="messaggio" rows="5" required style="width:100%; padding:12px 15px; border:2px solid #007bff; border-radius:8px; font-size:1rem; background:#000; color:#007bff; outline:none; transition:border-color 0.3s; resize:vertical;"></textarea>
+      <textarea name="messaggio" id="messaggio" rows="5" required style="width:100%; padding:12px 15px; border:2px solid #007bff; border-radius:8px; font-size:1rem; background:#000; color:#007bff; outline:none;"></textarea>
     </div>
-    <button type="submit" style="background:#007bff; color:#fff; padding:15px 40px; border:none; border-radius:50px; font-size:1.2rem; cursor:pointer; transition:background-color 0.3s;">
+    <button type="submit" style="background:#007bff; color:#fff; padding:15px 40px; border:none; border-radius:50px; font-size:1.2rem; cursor:pointer;">
       Invia Messaggio
     </button>
-    <div id="formMessage" class="form-message" style="margin-top:20px; font-weight:600;"></div>
+
+    <?php if ($response): ?>
+      <div style="margin-top:20px; font-weight:600; color:<?= strpos($response, 'successo') !== false ? 'limegreen' : 'red'; ?>;">
+        <?= $response; ?>
+      </div>
+    <?php endif; ?>
   </form>
 
   <style>
-    #contactForm input:focus,
-    #contactForm textarea:focus {
+    .contact-form input:focus,
+    .contact-form textarea:focus {
       border-color: #339cff;
       box-shadow: 0 0 5px #007bff88;
     }
@@ -1024,36 +1134,10 @@
       to {opacity: 1; transform: translateY(0);}
     }
   </style>
-
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const form = e.target;
-      const formMessage = document.getElementById('formMessage');
-
-      formMessage.style.color = '#007bff';
-      formMessage.textContent = 'Invio in corso...';
-
-      const formData = new FormData(form);
-
-      fetch(form.action, {
-        method: form.method,
-        body: formData
-      })
-      .then(response => response.text())
-      .then(data => {
-        formMessage.style.color = 'limegreen';
-        formMessage.textContent = 'Messaggio inviato con successo! Ti risponderò presto.';
-        form.reset();
-      })
-      .catch(error => {
-        formMessage.style.color = 'red';
-        formMessage.textContent = 'Errore durante l\'invio, riprova più tardi.';
-        console.error('Errore invio form:', error);
-      });
-    });
-  </script>
 </section>
+
+
+
 
 
 
