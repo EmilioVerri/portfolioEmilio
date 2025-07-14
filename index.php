@@ -259,19 +259,19 @@ _iub.csConfiguration = {"siteId":4151296,"cookiePolicyId":59616074,"lang":"it","
         .menu-icon:hover {
             background: #cccccc;
         }
+.menu {
+    position: absolute;
+    top: 20px;
+    left: -250px;
+    width: 200px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    z-index: 99999; /* valore molto alto per coprire tutto */
+}
 
-        .menu {
-            position: absolute;
-            top: 20px;
-            left: -250px;
-            width: 200px;
-            background: #ffffff;
-            border: 1px solid #000000;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-            z-index: 9;
-        }
 
         .menu.visible {
             transform: translateX(250px);
