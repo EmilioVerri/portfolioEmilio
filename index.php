@@ -1130,7 +1130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="form-group" style="margin-bottom:30px;">
       <label style="display:flex; align-items:center; font-size:0.95rem;">
         <input type="checkbox" name="privacy" required style="margin-right:10px;"> 
-        Accetto la <a href="https://www.iubenda.com/privacy-policy/59616074" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+        Accetto la &nbsp; <a href="https://www.iubenda.com/privacy-policy/59616074" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
       </label>
     </div>
 
