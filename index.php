@@ -487,10 +487,10 @@ _iub.csConfiguration = {"siteId":4151296,"cookiePolicyId":59616074,"lang":"it","
         <p>Gestione Dipendenti</p>
       </a>
 
-      <!--<a href="QR Code Manager" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
-        <img src="https://via.placeholder.com/300x200" alt="Project 7 Image" style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
-        <p>Project 7</p>
-      </a>-->
+      <a href=".\progetti\marocAdventure.php" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
+        <img src="./image/logoMaroc.jpeg" alt="maroc adventure marrakech" title="maroc adventure marrakech" style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
+        <p>Maroc Adventure Marrakech</p>
+      </a>
 
     </div>
   </div>
