@@ -188,7 +188,7 @@
 
   <div class="container">
     <h1>PenguinAI</h1>
-    <img src="../image/PenguinAI.png" alt="Immagine Progetto" title="Immagine Progetto" class="project-image" />
+    <img src="../image/penguinAI.png" alt="Immagine Progetto" title="Immagine Progetto" class="project-image" />
     <p class="description" style="margin-top: 40px; color: #ccc;">
       <strong>PenguinAI</strong> è un'intelligenza artificiale che si esegue su un PC locale di casa, garantendo la massima privacy e controllo.<br><br>
       Il sistema utilizza <strong>Ollama Gemma 3</strong> per l'elaborazione AI in locale e sfrutta <strong>Pollinations</strong> per la generazione di immagini creative.<br><br>
