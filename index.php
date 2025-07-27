@@ -466,6 +466,11 @@ _iub.csConfiguration = {"siteId":4151296,"cookiePolicyId":59616074,"lang":"it","
         <p>EcoSentinel</p>
       </a>
 
+       <a href=".\progetti\penguinAI.php" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
+        <img src="./image/penguinAI.jpeg" alt="penguinAI" title="penguinAI" style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
+        <p>penguinAI</p>
+      </a>
+
       <a href=".\progetti\smkrealestate.php" class="project-card" style="min-width: 220px; flex: 0 0 auto; text-align: center; text-decoration: none; color: inherit;">
         <img src="./image/smkRealEstate.png" alt="SmkRealEstate Valtellina" title="SmkRealEstate Valtellina" style="width: 180px; height: 150px; object-fit: cover; border-radius: 8px;">
         <p>SmkRealEstate Valtellina</p>
