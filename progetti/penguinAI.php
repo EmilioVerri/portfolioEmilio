@@ -200,7 +200,7 @@
       <a href="https://github.com/EmilioVerri/PenguinAIExtract" target="_blank" title="Vai alla repository GitHub">
         <i class="fab fa-github"></i>
       </a>
-      <a href="https://bit.ly/penguiAI" target="_blank" title="Vai al sito PenguinAI">
+      <a href="https://short-link.me/penguinAI" target="_blank" title="Vai al sito PenguinAI">
         <i class="fas fa-globe"></i>
       </a>
     </div>
