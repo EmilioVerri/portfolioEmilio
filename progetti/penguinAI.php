@@ -190,10 +190,25 @@
     <h1>PenguinAI</h1>
     <img src="../image/penguinAI.png" alt="Immagine Progetto" title="Immagine Progetto" class="project-image" />
     <p class="description" style="margin-top: 40px; color: #ccc;">
-      <strong>PenguinAI</strong> è un'intelligenza artificiale che si esegue su un PC locale di casa, garantendo la massima privacy e controllo.<br><br>
-      Il sistema utilizza <strong>Ollama Gemma 3</strong> per l'elaborazione AI in locale e sfrutta <strong>Pollinations</strong> per la generazione di immagini creative.<br><br>
-      Per assicurare la sicurezza e la disponibilità online, il progetto è protetto e distribuito tramite <strong>Cloudflare</strong>.<br><br>
-      Il codice sorgente è disponibile su GitHub e può essere scaricato, modificato e personalizzato secondo le proprie esigenze.
+    <strong>PenguinAI</strong> è un chatbot intelligente che genera risposte e immagini sfruttando modelli AI avanzati ospitati su server esterni.<br>
+Testo tramite <em>Gemma (Google)</em>, immagini tramite <em>Pollinations</em>. Tutto accessibile dal tuo browser, senza installazioni.
+
+<strong>PenguinAI</strong> è un progetto open source nato con l'obiettivo di offrire un assistente virtuale AI completamente controllabile e personalizzabile dall'utente.<br><br>
+
+Nella sua prima versione, il sistema era eseguito interamente su un PC locale, sfruttando <strong>XAMPP</strong> per l’hosting dell’interfaccia web PHP e <strong>Ollama</strong> (con il modello <em>Gemma 3</em>) per l’elaborazione dei testi in locale. Per la generazione di immagini creative, venivano (e vengono tuttora) utilizzate le <strong>API di Pollinations</strong>, che permettono la creazione di contenuti visivi tramite prompt testuali.<br><br>
+
+Per rendere PenguinAI accessibile anche da remoto, venne inizialmente configurato un <strong>port forwarding</strong> sul router domestico, abbinato a un sistema di <strong>reverse proxy</strong> locale per migliorare la sicurezza e gestire correttamente il traffico HTTP/HTTPS.<br><br>
+
+Tuttavia, nonostante le precauzioni, l’esposizione della rete casalinga a Internet attraverso il port forwarding è risultata una soluzione troppo rischiosa nel lungo periodo. Dopo alcuni giorni di test e uso reale, si è deciso di <strong>rimuovere il port forwarding</strong> per evitare potenziali vulnerabilità, e migrare verso un’architettura che sfrutta **servizi esterni per l'elaborazione AI**.<br><br>
+
+Attualmente, PenguinAI utilizza:
+
+<ul>
+  <li><strong>google/gemma-3n-e4b-it:free</strong> (tramite API) per la generazione dei testi;</li>
+  <li><strong>Pollinations API</strong> per la generazione delle immagini;</li>
+</ul>
+
+Il codice sorgente del progetto è completamente <strong>open source</strong> e disponibile su GitHub. All’interno dello storico del repository è possibile trovare anche i vecchi script e le configurazioni utilizzate durante la fase locale, comprese le istruzioni per l’utilizzo di Ollama in locale e le configurazioni del reverse proxy (NGINX).<br><br>
     </p>
 
     <div class="icon-wrapper">
